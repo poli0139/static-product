@@ -16,7 +16,7 @@ nav ul {
   flex-direction: row;
   justify-content: space-around;
 }
-ul li {
+nav ul li {
   list-style: none;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -27,7 +27,7 @@ ul li {
   margin: 1rem;
   background-color: #e4e4ea;
 }
-li a {
+nav li a {
   text-decoration: none;
   font-family: "Julius Sans One";
   color: #707070;
@@ -39,51 +39,71 @@ li a {
   text-decoration: none;
   color: black;
 }
-h3 {
+h4,
+h2,
+p,
+h3,
+li {
   font-family: "Julius Sans One";
-}
-
-.category {
-  margin-left: 3rem;
-}
-.productList {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-evenly;
 }
 .product {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.product img {
+  height: 40rem;
+}
+.information {
+  border: solid grey 3px;
+  padding-right: 5rem;
+  padding-left: 5rem;
+  padding-bottom: 1rem;
+  display: flex;
   flex-direction: column;
-  margin: 1rem;
-  padding: 2rem;
-  border: solid #707070 2px;
-  width: 20rem;
 }
-div img {
-  height: 25rem;
-  border-radius: 15px;
+.dropdown {
+  margin-left: auto;
+  width: 10rem;
 }
-.price {
+.size {
+  border: solid grey 3px;
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
   font-family: "Julius Sans One";
-  font-weight: bolder;
 }
-.link {
+.dropdown-content ul {
+  display: none;
+  flex-direction: column;
+  width: 10rem;
+}
+.dropdown-content {
+  background-color: #707070;
+  width: 10rem;
+}
+.dropdown-content li {
+  border: solid #707070 2px;
+  background-color: #e4e4ea;
+  border-radius: 15px;
+  list-style: none;
+  text-align: center;
+  padding: 0.5rem;
+  margin-left: 0;
+  font-size: small;
+}
+.dropdown:hover .dropdown-content ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.price {
   margin-top: auto;
   font-family: "Julius Sans One";
-  font-weight: 900;
-  font-size: medium;
-  align-self: center;
-  background-color: #dcdcdc;
-  padding: 1rem;
 }
-.link a {
-  text-decoration: none;
-  color: #a9a9a9;
-}
-.subtle {
+button {
   font-family: "Julius Sans One";
-  font-weight: 900;
-  font-size: medium;
-  color: #a9a9a9;
+  padding: 1rem;
+  font-weight: bold;
 }

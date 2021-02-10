@@ -39,12 +39,14 @@ li a {
   text-decoration: none;
   color: black;
 }
-h3 {
+h3,
+p {
   font-family: "Julius Sans One";
 }
 
 .category {
   margin-left: 3rem;
+  font-family: "Julius Sans One";
 }
 .productList {
   display: flex;
@@ -60,13 +62,19 @@ h3 {
   border: solid #707070 2px;
   width: 20rem;
 }
-div img {
+article img {
   height: 25rem;
   border-radius: 15px;
 }
-.price {
+.price,
+.discount,
+.sign {
   font-family: "Julius Sans One";
   font-weight: bolder;
+}
+.sign,
+.discount {
+  display: none;
 }
 .link {
   margin-top: auto;
@@ -86,4 +94,38 @@ div img {
   font-weight: 900;
   font-size: medium;
   color: #a9a9a9;
+}
+.productList article.soldOut img {
+  opacity: 0.5;
+}
+
+.productList article.soldOut .image::before {
+  content: "Sold Out";
+  position: absolute;
+  z-index: 1;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  border-radius: 15px;
+  background-color: #e4e4ea;
+  border: solid #707070 1px;
+  font-family: "Julius Sans One";
+}
+.productList .product.onSale .price {
+  text-decoration-line: line-through;
+}
+.productList .product.onSale .discount {
+  display: inline-block;
+  font-size: 1.5rem;
+  text-shadow: #a9a9a9 2px 2px 4px;
+}
+.productList .product.onSale .sign {
+  display: inline-block;
+  margin-left: auto;
+  background-color: #b0c4de;
+  border: #a2b7d3 solid 3px;
+  border-radius: 15px;
+  padding: 1rem;
+  text-align: center;
 }

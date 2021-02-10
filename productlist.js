@@ -46,6 +46,8 @@ function showProduct(product) {
 
   copy.querySelector(".price").textContent = `DKK ${product.price},-`;
 
+  copy.querySelector("a").href = `product.html?id=${product.id}`;
+
   if (product.soldout) {
     copy.querySelector(".product").classList.add("soldOut");
   }
